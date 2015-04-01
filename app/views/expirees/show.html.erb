@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @expiree.name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @expiree.score %>
+</p>
+
+<%= link_to 'Edit', edit_expiree_path(@expiree) %> |
+<%= link_to 'Back', expirees_path %>

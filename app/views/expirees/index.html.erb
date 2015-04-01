@@ -1,0 +1,27 @@
+<h1>Listing expirees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expirees.each do |expiree| %>
+      <tr>
+        <td><%= expiree.name %></td>
+        <td><%= expiree.score %></td>
+        <td><%= link_to 'Show', expiree %></td>
+        <td><%= link_to 'Edit', edit_expiree_path(expiree) %></td>
+        <td><%= link_to 'Destroy', expiree, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expiree', new_expiree_path %>
